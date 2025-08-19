@@ -1,0 +1,738 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* Hero Visual Section - LIFE LABEL Style */
+.hero-visual {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 40px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation Bar - Fixed */
+.nav-bar {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 0.7;
+}
+
+/* Section Styles */
+.concept-section {
+    padding: 120px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-content {
+    max-width: 800px;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.concept-detail {
+    max-width: 700px;
+}
+
+.concept-detail p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Price Section - Big Visual Impact */
+.price-section {
+    background: #000;
+    padding: 120px 60px;
+    text-align: center;
+}
+
+.price-visual {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.price-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.price-label {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ccc;
+    letter-spacing: 0.05em;
+    margin: 5px 0;
+}
+
+.price-amount {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 0.05em;
+    margin: 5px 0;
+}
+
+.price-note {
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    color: #ccc;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+/* Section Intro */
+.section-intro {
+    padding: 8rem 0 4rem 0;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+/* Sticky Header - スクロール追随ヘッダー */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sticky-header.show {
+    transform: translateY(0);
+}
+
+.sticky-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.sticky-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-number {
+    background: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.feature-name {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 300;
+    max-width: 300px;
+}
+
+/* Feature Sections - Vertical Layout */
+.feature-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.feature-image-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.feature-content-wrapper {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.feature-number {
+    font-size: 1.2rem;
+    color: #f2c12c;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.feature-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+}
+
+.feature-main-description {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Feature Detail Sections */
+.feature-detail-section {
+    padding: 8rem 0;
+    background: #fff;
+}
+
+.feature-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-detail-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.feature-detail-content ul {
+    margin: 2rem 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.feature-detail-content li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.feature-detail-content li:before {
+    content: "•";
+    color: #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.feature-detail-content strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.cost-comparison {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 3px solid #333;
+}
+
+.cost-comparison h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.cost-comparison ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cost-comparison li {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem 0;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.warranty-item {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #333;
+}
+
+.warranty-item h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.warranty-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.warranty-item small {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* Vision Section */
+.vision-section {
+    background: #000;
+    color: #fff;
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.vision-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.vision-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #f0f0f0;
+    padding: 120px 60px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+}
+
+.cta-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 4rem 60px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-content,
+    .concept-section,
+    .price-section,
+    .section-intro,
+    .feature-detail-section,
+    .vision-section,
+    .cta-section,
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .feature-section {
+        height: 80vh;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 2rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+    
+    .concept-section,
+    .price-section,
+    .section-intro,
+    .feature-detail-section,
+    .vision-section,
+    .cta-section,
+    .footer {
+        padding: 60px 20px;
+    }
+    
+    .feature-section {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .feature-content-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .price-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .cost-comparison {
+        padding: 1.5rem;
+    }
+    
+    .warranty-item {
+        padding: 1rem;
+    }
+    
+    /* スティッキーヘッダー - タブレット */
+    .sticky-content {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .sticky-title {
+        font-size: 1rem;
+    }
+    
+    .current-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .feature-name {
+        font-size: 0.8rem;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        top: 20px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .concept-section,
+    .price-section,
+    .section-intro,
+    .feature-detail-section,
+    .vision-section,
+    .cta-section {
+        padding: 40px 15px;
+    }
+    
+    .feature-section {
+        height: 60vh;
+        min-height: 350px;
+    }
+    
+    .feature-content-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .feature-detail-content p {
+        font-size: 1rem;
+    }
+    
+    .cost-comparison {
+        padding: 1rem;
+    }
+    
+    .cost-comparison li {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .warranty-item {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .warranty-item h5 {
+        font-size: 1rem;
+    }
+    
+    .warranty-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* スティッキーヘッダー - スマホ */
+    .sticky-header {
+        padding: 0.8rem 0;
+    }
+    
+    .sticky-content {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+    }
+    
+    .sticky-title {
+        font-size: 0.9rem;
+    }
+    
+    .current-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    
+    .feature-name {
+        font-size: 0.75rem;
+        max-width: 200px;
+        line-height: 1.3;
+    }
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lineup-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.lineup-card:nth-child(2) { animation-delay: 0.1s; }
+.lineup-card:nth-child(3) { animation-delay: 0.2s; }
+.lineup-card:nth-child(4) { animation-delay: 0.3s; }
+.lineup-card:nth-child(5) { animation-delay: 0.4s; }
+.lineup-card:nth-child(6) { animation-delay: 0.5s; }
