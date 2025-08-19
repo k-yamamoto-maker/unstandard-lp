@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Next.js（App Router）でLPの最小構成を作りたい。まず “実行前の計画” を出して。\n要件：\n- create-next-app（TypeScript/ESLint/Tailwind 有効）\n- ルート /（ヒーロー＋CTA）、/features（特徴一覧）、/voices（お客様の声）、/signup（仮フォーム）\n- npm scripts: dev/build/start\n- 実行予定コマンド、作成/変更ファイル一覧、完了後の起動方法を明記\n計画レビュー後に「実行OK」と言うまでコマンドは実行しないで。"
+    ],
+    "deny": []
+  }
+}
